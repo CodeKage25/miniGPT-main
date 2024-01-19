@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(59, 59, 58);
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .headeing-text {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .main-img {
+            padding-top: 13%;
+        }
+
+        #text {
+            padding-bottom: 10%;
+        }
+
+        form {
+            padding-top: 70px;
+        }
+
+        form input {
+            background-color: white;
+            color: black;
+            padding: 15px 100px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .demo-container {
+            display: flex;
+            padding-left: 30%;
+            padding-right: 30%;
+
+        }
+
+        .demo {
+            padding: 15px;
+            border: 1px solid white;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .demo a {
+            color: white;
+            opacity: 0.7;
+            text-decoration: none;
+
+        }
+
+        .demo a:hover {
+            opacity: 1;
+        }
+
+        h5 {
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-img">
+        </div>
+        <p id="text" class="headeing-text"> Welcome To MiniGPT? </p>
+        <div class="demo-container">
+            <div class="demo">
+                <a href="/test?prompt=about-cat&template=cat">
+                    <h5>Learn About Cat</h5>
+                    <p> A cat is a small domesticated carnivorous mammal that is often kept as a petCats have been domesticate...
+                    </p>
+                </a>
+
+            </div>
+            <div class="demo">
+                <a href="/test?prompt=best-football-player&template=player">
+                    <h5>Best Football Player</h5>
+                    <p> It is subjective to determine the best football player as it depends on personal opinions and preference
+                    </p>
+                </a>
+
+            </div>
+        </div>
+        <div class="demo-container">
+            <div class="demo">
+                <a href="/test?prompt=future-of-ai&template=ai">
+                    <h5>Future of Artificial Intellingence</h5>
+
+                    <p>The future of AI holds immense possibilities and potential for transforming various industries and aspects 
+                </a>
+
+            </div>
+            <div class="demo">
+                <a href="/test?prompt=german-shepherd&template=germanShepherd">
+                    <h5>German Shepherd</h5>
+                    <p> The German Shepherd is a breed of working dog known for its intelligence, versatility, and strong loyalty to
+                    </p>
+                </a>
+
+            </div>
+        </div>
+        <form action="/chat" method="get">
+            <input type="submit" value="Live Chat">
+        </form>
+    </div>
+</body>
+
+</html>

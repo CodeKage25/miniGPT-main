@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/second.css">
+    <title>Chat With MiniGpt</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+
+        <div class="chat-container">
+            <div class="message-container">
+
+                <% if (userPrompt) { %>
+                    <div class="message receiver-message">
+                        <img src="https://icons8.com/icon/12438/customer" alt="Your Avatar" class="avatar">
+                        <%=userPrompt %>
+                    </div>
+
+                    <% } %>
+
+                        <% if (userPrompt) { %>
+                            <div class="message sender-message">
+                                <img src="https://icons8.com/icon/44770/workstation" alt="miniGPT Avatar"
+                                    class="avatar">
+                                <%=data %>
+                            </div>
+
+
+                            <% } %>
+
+            </div>
+            <div class="message">
+                <form id="inputForm" action="" method="get">
+                    <input required aria-required="true" name="prompt" id="userInput" type="text"
+                        placeholder="Type your message...">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <script src="/js/main.js"></script>
+
+</body>
+
+
+</html>
